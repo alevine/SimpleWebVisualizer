@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Web Visualizer for MUST 1220</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../node_modules/milligram/dist/milligram.min.css">
+  </head>
+  <body>
+    <main role="main" class="container">
+      <div class="visuals-main">
+        <video id="animation_video" class="flex-half" loop></video>
+        <canvas id="canvas" class="flex-half" width="540"></canvas>
+      </div>
+      <form method="POST" enctype="multipart/form-data" class="audio-input-form" id="input-form">
+        <div>
+          <label>Audio File:</label>
+          <input accept="audio/*" type="file" name="audio_file" id="audio_input"/>
+        </div>
+        <div class="content-row">
+          <button id="load_button" type=submit class="content-item">⇧</button>
+          <button id="play_button" class="content-item" disabled="disabled">&#9658;</button>
+          <button id="stop_button" class="content-item" disabled="disabled">&#9632;</button>
+          <div class="content-item" id="my_guess">My tempo guess: ___</div>
+          <div class="content-item" id="library_guess">Tempo from library: ___</div>
+          <div class="content-item" id="sample_rate">Sample rate: ___</div>
+        </div>
+      </form>
+    </main>
+  </body>
+  <script src="main.js"></script>
+</html>

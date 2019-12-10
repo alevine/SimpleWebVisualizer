@@ -1,0 +1,19 @@
+{
+  "name": "webvisualizer",
+  "version": "1.0.0",
+  "description": "Web Visualizer for MUST 1220",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "Aaron Levine",
+  "license": "ISC",
+  "dependencies": {
+    "milligram": "^1.3.0",
+    "web-audio-beat-detector": "^7.0.73"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2"
+  }
+}

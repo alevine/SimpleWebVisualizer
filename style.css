@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.audio-input-form {
+  margin-bottom: 0;
+  margin-top: 3vh;
+}
+
+.visuals-main {
+  display: flex;
+  height: 75vh;
+  outline: 2px solid #341677;
+  flex-direction: row;
+  flex-basis: 0;
+  align-items: stretch;
+}
+
+.flex-half {
+    flex: 1;
+    height: 75vh;
+    max-width: 50%;
+}
+
+.content-row {
+    display: flex;
+}
+
+.content-item {
+    margin: 5px;
+    align-self: end;
+}
+
+canvas {
+    border-left: 2px solid #341677;
+}
+
+#load_button {
+    padding: 0 3.5rem;
+    background-color: #341677;
+    border-color: #341677;
+}
+
+#play_button {
+    background-color: #a32f80;
+    border-color: #a32f80;
+}
+
+#stop_button {
+    background-color: #ff6363;
+    border-color: #ff6363;
+}
+
+#animation_video {
+    background-size: 100%;
+    background-color: black;
+}
