@@ -4,7 +4,7 @@
   "description": "Web Visualizer for MUST 1220",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Hi mom!\" && exit 1",
     "build": "webpack"
   },
   "author": "Aaron Levine",

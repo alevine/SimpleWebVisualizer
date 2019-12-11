@@ -12,7 +12,7 @@
 .visuals-main {
   display: flex;
   height: 75vh;
-  outline: 2px solid #341677;
+  outline: 4px solid #341677;
   flex-direction: row;
   flex-basis: 0;
   align-items: stretch;

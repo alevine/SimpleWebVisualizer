@@ -217,7 +217,7 @@ function getIntervals(peaks) {
 
 function onBeat() {
     // Only change animations every so often
-    if (!videoPlayer.src || Math.random() > 0.5) {
+    if (!videoPlayer.src || Math.random() > 0.3) {
         let randSrcChoice = videoSources[Math.random() * videoSources.length | 0]
         videoPlayer.src = randSrcChoice;
     }
