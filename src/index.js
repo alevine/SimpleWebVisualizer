@@ -105,14 +105,13 @@ function getAudioBuffer() {
 
                 const myTempo = top[0].tempo;
 
-                analyze(audioBufferSource.buffer)
-                .then((tempo) => {
+                analyze(audioBufferSource.buffer).then((tempo) => {
                     // the tempo could be analyzed
                     libTempo = Math.round(tempo);
 
                     // Set labels on completion
                     document.getElementById('my_guess').innerHTML =
-                        'My tempo guess: ' + myTempo;
+                        'Our tempo guess: ' + myTempo;
                     document.getElementById('library_guess').innerHTML =
                         'Tempo from library: ' + libTempo;
                     document.getElementById('sample_rate').innerHTML =
@@ -193,6 +192,8 @@ function getIntervals(peaks) {
         count: 1
       };
 
+      // If the group's tempo is < 90 or > 180 it's probably wrong,
+      // so we should adjust it accordingly
       while (group.tempo < 90) {
         group.tempo *= 2;
       }
@@ -240,8 +241,15 @@ function draw() {
     for (let i = 0; i < bufferLength; i++) {
         barHeight = dataArray[i] / 2;
 
+        const gradient = canvasCtx.createLinearGradient(0, canvas.height,
+            0, canvas.height / 1.5);
+
+        gradient.addColorStop(0, '#341677');
+        gradient.addColorStop(0.5, '#a32f80')
+        gradient.addColorStop(1, '#ff6363')
+
         // Draw a bar for this buffer with a nice color scheme :)
-        canvasCtx.fillStyle = 'rgb(' + (barHeight + 100) + ', 47, 128)';
+        canvasCtx.fillStyle = gradient;
         canvasCtx.fillRect(x, canvas.height - barHeight / 2, barWidth, barHeight);
 
         x += barWidth + 1;
