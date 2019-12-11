@@ -1,8 +1,8 @@
 # 🚀 Web Visualizer for MUST 1220
 
 ## Requirements:
-    * `npm` get it [here](https://nodejs.org/en/) with NodeJS
-    * A web browser? That's it
+  * `npm` get it [here](https://nodejs.org/en/) with NodeJS
+  * A web browser? That's it
 
 ## Installation
 
